@@ -485,8 +485,6 @@ footer {
         width: min(100%, 430px);
     }
 
-    }
-
     .plushie {
         transform: scale(0.82);
     }
@@ -506,24 +504,21 @@ footer {
 }
 
 @media (max-width: 480px) {
-
-      .logo img {
+    .logo img {
         width: 155px;
     }
 
-      .hero-plushie {
+    .hero-plushie {
         width: min(100%, 330px);
     }
 
-      .hero-plushie {
+    .hero-plushie {
         width: min(100%, 350px);
     }
 
-        .eyebrow {
-            font-size: 0.78rem;
-            padding: 9px 15px;
-        }
-
+    .eyebrow {
+        font-size: 0.78rem;
+        padding: 9px 15px;
     }
 
     .plushie {
@@ -543,7 +538,8 @@ footer {
     .signup-card {
         padding: 20px;
     }
-} 
+}
+
 .hero-art {
     position: relative;
     min-height: 560px;
