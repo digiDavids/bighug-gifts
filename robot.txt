@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bighuggifts.com/sitemap.xml
+Sitemap: https://www.bighuggifts.com/sitemap.xml
