@@ -192,7 +192,7 @@ button:hover {
 
 .hero-art {
     position: relative;
-    min-height: 560px;
+    min-height: 600px;
 
     display: flex;
     align-items: center;
@@ -463,16 +463,28 @@ footer {
     }
 
     .hero-plushie {
-        width: min(100%, 400px);
+        display: block;
+
+        width: min(100%, 560px);
+        height: auto;
+
+        filter: drop-shadow(
+            0 25px 25px rgba(81, 60, 53, 0.16)
+        );
     }
 
     .hero-text {
         font-size: 1.05rem;
     }
 
-    .hero-art {
+     .hero-art {
         min-height: 430px;
-        order: -1;
+    }
+
+    .hero-plushie {
+        width: min(100%, 430px);
+    }
+
     }
 
     .plushie {
@@ -503,8 +515,15 @@ footer {
         width: min(100%, 330px);
     }
 
-    .hero-art {
-        min-height: 360px;
+      .hero-plushie {
+        width: min(100%, 350px);
+    }
+
+        .eyebrow {
+            font-size: 0.78rem;
+            padding: 9px 15px;
+        }
+
     }
 
     .plushie {
@@ -552,7 +571,7 @@ footer {
 }
 
 .plushie-link:hover {
-    transform: translateY(-8px) rotate(1deg);
+    transform: translateY(-10px) rotate(1.5deg) scale(1.02);
 }
 
 .plushie-link:focus-visible {
@@ -561,10 +580,91 @@ footer {
     border-radius: 24px;
 }
 
+.plushie-link {
+    cursor: zoom-in;
+}
+
+.launch-note {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-top: 16px;
+
+    color: var(--brown-light);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.launch-dot {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: var(--peach);
+
+    box-shadow: 0 0 0 5px rgba(244, 181, 158, 0.2);
+
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.25);
+        opacity: 0.65;
+    }
+}
+
 .hidden-field {
     position: absolute;
     left: -9999px;
     width: 1px;
     height: 1px;
     overflow: hidden;
+}
+
+.hero-badge {
+    position: absolute;
+    right: 5%;
+    bottom: 12%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 105px;
+    height: 105px;
+
+    border-radius: 50%;
+
+    background: var(--white);
+
+    box-shadow: 0 15px 35px rgba(81, 60, 53, 0.14);
+
+    transform: rotate(8deg);
+
+    font-family: "Baloo 2", sans-serif;
+    text-align: center;
+}
+
+.hero-badge span {
+    font-size: 0.8rem;
+}
+
+.hero-badge strong {
+    font-size: 1.2rem;
+}
+.footer-tagline {
+    font-family: "Baloo 2", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
 }
