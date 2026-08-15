@@ -502,7 +502,7 @@ footer {
       .hero-plushie {
         width: min(100%, 330px);
     }
-    
+
     .hero-art {
         min-height: 360px;
     }
@@ -559,4 +559,12 @@ footer {
     outline: 4px solid var(--peach);
     outline-offset: 8px;
     border-radius: 24px;
+}
+
+.hidden-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
