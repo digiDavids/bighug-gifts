@@ -462,6 +462,10 @@ footer {
         font-size: clamp(3.1rem, 15vw, 5rem);
     }
 
+    .hero-plushie {
+        width: min(100%, 400px);
+    }
+
     .hero-text {
         font-size: 1.05rem;
     }
@@ -494,6 +498,10 @@ footer {
       .logo img {
         width: 155px;
     }
+
+      .hero-plushie {
+        width: min(100%, 330px);
+    }
     
     .hero-art {
         min-height: 360px;
@@ -517,3 +525,38 @@ footer {
         padding: 20px;
     }
 } 
+.hero-art {
+    position: relative;
+    min-height: 560px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plushie-link {
+    position: relative;
+    display: block;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.hero-plushie {
+    display: block;
+    width: min(100%, 500px);
+    height: auto;
+
+    filter: drop-shadow(0 25px 25px rgba(81, 60, 53, 0.16));
+}
+
+.plushie-link:hover {
+    transform: translateY(-8px) rotate(1deg);
+}
+
+.plushie-link:focus-visible {
+    outline: 4px solid var(--peach);
+    outline-offset: 8px;
+    border-radius: 24px;
+}
