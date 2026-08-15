@@ -1,0 +1,519 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+    --cream: #fff9f1;
+    --cream-dark: #f7ecdd;
+    --brown: #513c35;
+    --brown-light: #795f55;
+    --peach: #f4b59e;
+    --peach-dark: #df8f76;
+    --pink: #f6d4d2;
+    --green: #c9d8c0;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--cream);
+    color: var(--brown);
+    font-family: "Nunito", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px 32px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo img {
+    display: block;
+    width: 190px;
+    height: auto;
+} 
+
+.hero {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 32px 80px;
+
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 8px 16px;
+
+    border-radius: 999px;
+    background: var(--green);
+
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+h1 {
+    max-width: 650px;
+
+    font-family: "Baloo 2", sans-serif;
+    font-size: clamp(3.5rem, 6vw, 6rem);
+    line-height: 0.92;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+.hero-text {
+    max-width: 570px;
+    margin-top: 28px;
+
+    color: var(--brown-light);
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.signup-card {
+    max-width: 570px;
+    margin-top: 35px;
+    padding: 24px;
+
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    border-radius: 24px;
+
+    box-shadow: 0 18px 50px rgba(81, 60, 53, 0.08);
+}
+
+.signup-card h2 {
+    font-family: "Baloo 2", sans-serif;
+    font-size: 1.6rem;
+}
+
+.signup-card > p {
+    margin: 4px 0 18px;
+    color: var(--brown-light);
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    min-width: 0;
+    flex: 1;
+
+    padding: 15px 17px;
+
+    border: 2px solid var(--cream-dark);
+    border-radius: 14px;
+
+    outline: none;
+
+    font: inherit;
+    color: var(--brown);
+
+    transition: border-color 0.2s ease;
+}
+
+input:focus {
+    border-color: var(--peach);
+}
+
+button {
+    padding: 15px 20px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: var(--peach);
+    color: var(--brown);
+
+    font: inherit;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+button:hover {
+    background: var(--peach-dark);
+    transform: translateY(-2px);
+}
+
+.form-message {
+    min-height: 20px;
+    margin-top: 10px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* Plushie illustration */
+
+.hero-art {
+    position: relative;
+    min-height: 560px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(1px);
+}
+
+.blob-one {
+    width: 440px;
+    height: 440px;
+    background: var(--pink);
+}
+
+.blob-two {
+    width: 300px;
+    height: 300px;
+    background: var(--green);
+    opacity: 0.55;
+    transform: translate(100px, 120px);
+}
+
+.plushie {
+    position: relative;
+    z-index: 2;
+    width: 330px;
+    height: 430px;
+}
+
+.head {
+    position: absolute;
+    top: 45px;
+    left: 45px;
+
+    width: 240px;
+    height: 220px;
+
+    border-radius: 48% 48% 45% 45%;
+
+    background: #c79572;
+
+    box-shadow:
+        inset -12px -10px 0 rgba(81, 60, 53, 0.08),
+        0 15px 30px rgba(81, 60, 53, 0.12);
+}
+
+.ear {
+    position: absolute;
+    z-index: 1;
+
+    width: 85px;
+    height: 100px;
+
+    background: #b98262;
+    border-radius: 50%;
+}
+
+.ear-left {
+    top: 35px;
+    left: 30px;
+    transform: rotate(-28deg);
+}
+
+.ear-right {
+    top: 35px;
+    right: 30px;
+    transform: rotate(28deg);
+}
+
+.eye {
+    position: absolute;
+    top: 88px;
+
+    width: 18px;
+    height: 23px;
+
+    background: var(--brown);
+    border-radius: 50%;
+}
+
+.eye-left {
+    left: 65px;
+}
+
+.eye-right {
+    right: 65px;
+}
+
+.muzzle {
+    position: absolute;
+    left: 50%;
+    bottom: 34px;
+
+    width: 105px;
+    height: 70px;
+
+    transform: translateX(-50%);
+
+    background: #e7c1a0;
+    border-radius: 50%;
+}
+
+.nose {
+    position: absolute;
+    top: 17px;
+    left: 50%;
+
+    width: 23px;
+    height: 17px;
+
+    transform: translateX(-50%);
+
+    background: var(--brown);
+    border-radius: 50%;
+}
+
+.smile {
+    position: absolute;
+    top: 31px;
+    left: 50%;
+
+    width: 28px;
+    height: 16px;
+
+    transform: translateX(-50%);
+
+    border-bottom: 3px solid var(--brown);
+    border-radius: 50%;
+}
+
+.body {
+    position: absolute;
+    left: 70px;
+    bottom: 35px;
+
+    width: 190px;
+    height: 190px;
+
+    background: #c79572;
+    border-radius: 45% 45% 42% 42%;
+}
+
+.belly {
+    position: absolute;
+    left: 50%;
+    top: 45px;
+
+    width: 115px;
+    height: 100px;
+
+    transform: translateX(-50%);
+
+    background: #e7c1a0;
+    border-radius: 50%;
+}
+
+.arm {
+    position: absolute;
+    top: 55px;
+
+    width: 65px;
+    height: 115px;
+
+    background: #b98262;
+    border-radius: 50%;
+}
+
+.arm-left {
+    left: -35px;
+    transform: rotate(28deg);
+}
+
+.arm-right {
+    right: -35px;
+    transform: rotate(-28deg);
+}
+
+.foot {
+    position: absolute;
+    bottom: 15px;
+
+    width: 75px;
+    height: 55px;
+
+    background: #b98262;
+    border-radius: 50%;
+}
+
+.foot-left {
+    left: 65px;
+}
+
+.foot-right {
+    right: 65px;
+}
+
+.yarn-ball {
+    position: absolute;
+    z-index: 3;
+    right: 25px;
+    bottom: 45px;
+
+    width: 75px;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--white);
+    border-radius: 50%;
+
+    font-size: 2.5rem;
+
+    box-shadow: 0 12px 30px rgba(81, 60, 53, 0.12);
+
+    transform: rotate(12deg);
+}
+
+footer {
+    padding: 25px 32px 35px;
+
+    text-align: center;
+
+    color: var(--brown-light);
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    margin-top: 10px;
+
+    font-weight: 800;
+}
+
+.footer-links a:hover {
+    color: var(--peach-dark);
+}
+
+.copyright {
+    margin-top: 15px;
+    opacity: 0.7;
+}
+
+/* Mobile */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        padding: 22px 20px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 35px 20px 60px;
+        gap: 30px;
+    }
+
+    h1 {
+        font-size: clamp(3.1rem, 15vw, 5rem);
+    }
+
+    .hero-text {
+        font-size: 1.05rem;
+    }
+
+    .hero-art {
+        min-height: 430px;
+        order: -1;
+    }
+
+    .plushie {
+        transform: scale(0.82);
+    }
+
+    .blob-one {
+        width: 360px;
+        height: 360px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+      .logo img {
+        width: 155px;
+    }
+    
+    .hero-art {
+        min-height: 360px;
+    }
+
+    .plushie {
+        transform: scale(0.65);
+    }
+
+    .blob-one {
+        width: 300px;
+        height: 300px;
+    }
+
+    .blob-two {
+        width: 200px;
+        height: 200px;
+    }
+
+    .signup-card {
+        padding: 20px;
+    }
+} 
