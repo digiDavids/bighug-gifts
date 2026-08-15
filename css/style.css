@@ -67,7 +67,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 60px;
+    gap: 40px;
 }
 
 .hero-content {
@@ -196,7 +196,7 @@ button:hover {
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .blob {
@@ -463,15 +463,21 @@ footer {
     }
 
     .hero-plushie {
-        display: block;
+    display: block;
 
-        width: min(100%, 560px);
-        height: auto;
+    width: min(100%, 560px);
+    height: auto;
 
-        filter: drop-shadow(
-            0 25px 25px rgba(81, 60, 53, 0.16)
-        );
-    }
+    margin-right: -20px;
+
+    filter: drop-shadow(
+        0 25px 25px rgba(81, 60, 53, 0.16)
+    );
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
 
     .hero-text {
         font-size: 1.05rem;
@@ -508,14 +514,7 @@ footer {
         width: 155px;
     }
 
-    .hero-plushie {
-        width: min(100%, 330px);
-    }
-
-    .hero-plushie {
-        width: min(100%, 350px);
-    }
-
+    
     .eyebrow {
         font-size: 0.78rem;
         padding: 9px 15px;
@@ -540,14 +539,20 @@ footer {
     }
 }
 
-.hero-art {
-    position: relative;
-    min-height: 560px;
+ .hero {
+        grid-template-columns: 1fr;
+    }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .hero-art {
+        min-height: 430px;
+        justify-content: center;
+    }
+
+    .hero-plushie {
+        width: min(100%, 430px);
+        margin-right: 0;
+    }
+
 
 .plushie-link {
     position: relative;
